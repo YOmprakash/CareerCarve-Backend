@@ -19,7 +19,6 @@ mongoose.connect(process.env.MONGO_URI, {
 }).catch(err => console.log(err));
 
 
-// Endpoint to fetch mentor data from MongoDB
 app.get('/api/mentors', async (req, res) => {
   try {
     const mentors = await Mentor.find();
